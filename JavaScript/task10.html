@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Swap 2 Array's</h2>
+
+    <button onclick="arraySwap()">Swap</button>
+
+    <h3 id="out1"></h3>
+    <h3 id="out2"></h3>
+
+    <script >
+        function arraySwap(){
+            let n = parseInt(prompt("Enter the size of the array : "))
+            let array1=[]
+            let array2=[]
+
+            for(let i=0;i<n;i++){
+                array1[i]=parseInt(prompt("Enter the value for array 1 ,element no " + (i+1)+" : "))
+            }
+            for(let i=0;i<n;i++){
+                array2[i]=parseInt(prompt("Enter the value for array 1 ,element no " + (i+1)+" : "))
+            }
+            for(let i =0 ; i<n;i++){
+                let temp = array1[i]
+                array1[i] = array2[i]
+                array2[i] = temp
+            }
+            document.getElementById("out1").innerHTML ="The swapped value of first Array : "+ array1.join(',')
+            document.getElementById("out2").innerHTML = "The swapped value of Second Array : "+array2.join(',')
+        }
+    </script>
+    
+</body>
+</html>
